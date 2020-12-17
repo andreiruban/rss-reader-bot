@@ -9,4 +9,5 @@ application {
 }
 
 dependencies {
+    implementation(project(":bot"))
 }

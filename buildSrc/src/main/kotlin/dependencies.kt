@@ -2,7 +2,7 @@ const val kotbotJvmTarget = "11"
 
 const val kotlinCoroutines = "1.4.2"
 
-const val tgBotApi = "org.telegram:telegrambots:5.0.1"
+const val tgBotApi = "org.telegram:telegrambots:4.9.1"
 
 private const val junit = "5.7.0"
 const val junitApi = "org.junit.jupiter:junit-jupiter-api:$junit"
