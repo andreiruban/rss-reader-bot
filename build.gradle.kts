@@ -9,5 +9,8 @@ application {
 }
 
 dependencies {
+    implementation(logback)
+    implementation(komodoLogging)
+
     implementation(project(":bot"))
 }
