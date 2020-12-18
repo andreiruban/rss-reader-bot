@@ -5,6 +5,9 @@ import io.heapy.logging.logger
 import io.ktor.client.*
 import io.ktor.client.request.*
 
+// TODO: add Ktor Client configuration
+// TODO: cover with unit tests
+// TODO: Introduce RSS-parser
 class RssGateway(
     private val client: HttpClient,
     private val url: String
