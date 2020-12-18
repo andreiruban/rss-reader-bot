@@ -4,6 +4,6 @@ plugins {
 
 dependencies {
     api(tgBotApi)
-    implementation(logback)
+    implementation(ktorClient)
     implementation(komodoLogging)
 }
