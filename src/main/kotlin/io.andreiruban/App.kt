@@ -1,5 +1,7 @@
 package io.andreiruban
 
+import com.typesafe.config.ConfigFactory
+import io.github.config4k.extract
 import io.heapy.logging.logger
 import io.ktor.client.*
 import io.ktor.client.engine.apache.*
@@ -7,7 +9,7 @@ import io.ktor.client.engine.apache.*
 object App {
     @JvmStatic
     fun main(args: Array<String>) {
-        val configuration = DefaultBotConfiguration()
+        val configuration = ConfigFactory.load().extract<DefaultConfiguration>()
         val client = HttpClient(Apache)
 
         val rssGateway = RssGateway(
@@ -17,12 +19,15 @@ object App {
 
         val rssReaderBot = {
             RssReaderBot(
-                configuration = configuration,
+                configuration = configuration.bot,
                 rssGateway = rssGateway
             )
         }
 
-        startBot(configuration, rssReaderBot)
+        startBot(
+            configuration = configuration.bot,
+            bot = rssReaderBot
+        )
 
         LOGGER.info("Application has been started.")
     }

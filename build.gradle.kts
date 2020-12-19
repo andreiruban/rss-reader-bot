@@ -12,6 +12,9 @@ dependencies {
     implementation(logback)
     implementation(komodoLogging)
 
+    implementation(komodoDotenv)
+    implementation(config4k)
+
     implementation(ktorClient)
 
     implementation(project(":bot"))
