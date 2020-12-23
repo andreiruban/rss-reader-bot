@@ -4,6 +4,6 @@ plugins {
 
 dependencies {
     api(tgBotApi)
-    implementation(ktorClient)
+    implementation(syndicationApi)
     implementation(komodoLogging)
 }
