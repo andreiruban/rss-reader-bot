@@ -26,7 +26,6 @@ class RssReaderBotPlugin : Plugin<Project> {
         repositories {
             jcenter()
             maven { url = uri("https://dl.bintray.com/heapy/heap-dev") }
-            maven { url = uri("https://dl.bintray.com/prof18/maven") }
         }
 
         tasks.withType<KotlinJvmCompile> {

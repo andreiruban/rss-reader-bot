@@ -16,9 +16,11 @@ class RssReaderBot(
     override fun getBotToken() = configuration.token
     override fun getBotUsername() = configuration.name
 
-
+    // TODO: introduce TG-command to place urls
     private val syndicationReader = Syndication(url = "https://hackernoon.com/feed")
 
+    // TODO: introduce dynamic reader creation
+    // TODO: think about possible reader pool
     private val rssReader = syndicationReader.create(RssReader::class.java)
 
 
